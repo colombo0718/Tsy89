@@ -949,7 +949,9 @@ C                           RUSSIA
 C
       COMMON A(26),DS3,K,IY,B(8)
       EXTERNAL EXNAME
+      integer iii
       K=N
+      
   1   DS3=-DS/3.
       CALL RHAND(X,Y,Z,R11,R12,R13,IOPT,EXNAME)
       CALL RHAND(X+R11,Y+R12,Z+R13,R21,R22,R23,IOPT,EXNAME)
@@ -1029,7 +1031,9 @@ C
       K1=IHARM
       AL=0.
       CALL RHAND(X,Y,Z,R1,R2,R3,IOPT,EXNAME)
+      print*,'R1,R2,R3',R1,R2,R3
       AD=SIGN(0.01,X*R1+Y*R2+Z*R3)
+      print*,'ad',ad
       RR=SQRT(X**2+Y**2+Z**2)+AD
   1   L=L+1
       IF(L.GT.NP) GOTO 7

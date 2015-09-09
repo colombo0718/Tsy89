@@ -89,8 +89,8 @@ C
 C
 C
          IF (ID.NE.1)  GOTO  3
-	   DO  2  I = 1, 30
-	     DO  1  L = 1, 3
+         DO  2  I = 1, 30
+           DO  1  L = 1, 3
   1            DER(L,I) = 0.0D0
   2        CONTINUE
 C
@@ -166,10 +166,10 @@ C
   3      CONTINUE
 C
            X  = XI(1)
-	   Y  = XI(2)
-	   Z  = XI(3)
+           Y  = XI(2)
+           Z  = XI(3)
                TLT2=XI(4)**2
-	   SPS = sin(XI(4))
+           SPS = sin(XI(4))
            CPS = DSQRT (1.0D0 - SPS ** 2)
 C
        X2=X*X
@@ -330,29 +330,29 @@ C
            ES=EX*SPS
            ECZ=EC*Z
            ESZ=ES*Z
-	   ESZY2=ESZ*Y2
-	   ESZZ2=ESZ*Z2
-	   ECZ2=ECZ*Z
-	   ESY=ES*Y
+           ESZY2=ESZ*Y2
+           ESZZ2=ESZ*Z2
+           ECZ2=ECZ*Z
+           ESY=ES*Y
 C
-	   DER(1,6)=ECZ
-	   DER(1,7)=ES
-	   DER(1,8)=ESY*Y
-	   DER(1,9)=ESZ*Z
-	   DER(2,10)=ECZ*Y
-	   DER(2,11)=ESY
-	   DER(2,12)=ESY*Y2
-	   DER(2,13)=ESY*Z2
-	   DER(3,14)=EC
-	   DER(3,15)=EC*Y2
-	   DER(3,6)=ECZ2*W1
-	   DER(3,10)=ECZ2*W5
-	   DER(3,7)=ESZ*W2
-	   DER(3,11)=-ESZ
-	   DER(3,8)=ESZY2*W2
-	   DER(3,12)=ESZY2*W6
-	   DER(3,9)=ESZZ2*W3
-	   DER(3,13)=ESZZ2*W4
+           DER(1,6)=ECZ
+           DER(1,7)=ES
+           DER(1,8)=ESY*Y
+           DER(1,9)=ESZ*Z
+           DER(2,10)=ECZ*Y
+           DER(2,11)=ESY
+           DER(2,12)=ESY*Y2
+           DER(2,13)=ESY*Z2
+           DER(3,14)=EC
+           DER(3,15)=EC*Y2
+           DER(3,6)=ECZ2*W1
+           DER(3,10)=ECZ2*W5
+           DER(3,7)=ESZ*W2
+           DER(3,11)=-ESZ
+           DER(3,8)=ESZY2*W2
+           DER(3,12)=ESZY2*W6
+           DER(3,9)=ESZZ2*W3
+           DER(3,13)=ESZZ2*W4
 C
 C  FINALLY, CALCULATE NET EXTERNAL MAGNETIC FIELD COMPONENTS,
 C    BUT FIRST OF ALL THOSE FOR C.-F. FIELD:
